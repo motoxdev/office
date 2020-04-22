@@ -75,5 +75,18 @@ class queue{
       }
     }
 
+    //method for returning the front elements
+    T returnFront(){
+      return front->data;
+    }
+    //returning the node at the back
+    T returnBack(){
+      return back->data;
+    }
+    //getting the int value of the size of the Queue
+    int getSize(){
+      return size;
+    }
+
 
 }
