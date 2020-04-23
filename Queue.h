@@ -1,27 +1,106 @@
-#include "ListNode.h"
+#include "doublyLinkedList.h"
+#include <iostream>
 using namespace std;
 
 //utilizing the template class shown in textbook
 template <class T>
 class Queue{
   public:
-    ListNode<T> *front;
-    ListNode<T> *back;
-    int size;
-  //private:
-  //no private variables due to wanting to be able to access everywhere
-    //defining constructor for the queue template
-    Queue(){
-      size = 0;
-      front= NULL;
-      back = NULL;
-    }
-    //defining deconstructor for queue template
-    ~Queue(){
-      size = 0;
-      delete front;
-      delete back;
-    }
+    Queue(); //constructor
+    ~Queue(); //deconstructor
+
+    T remove(); //taking top element out
+    T peek(); //sees top element
+    void insert(T data); //adding element
+    bool isEmpty(); //is the queue empty
+    void print(); //prints out the entire queue
+    int getSize(); //how many elements are in the queue
+    T* getIndex(int index); //returns 'address'/spot of element
+    int numElements; //variable for the number of so-called nodes in queue
+
+    private:
+      doublyLinkedList<T> *myQueue; //creates a queue
+
+};
+
+//filling out template
+template<class T>
+void Queue<T>::Queue(){
+      numElements = 0;
+      myQueue = new doublyLinkedList<T>();
+}
+//defining deconstructor for queue template
+template<class T>
+Queue<T>::~Queue(){
+      //numElements = 0;
+      delete myQueue;
+}
+
+template<class T>
+void Queue<T>::insert(T data){
+  myQueue->insertBack(data);
+  numElements++;
+}
+
+template<class T>
+T Queue<T>::remove(){
+  T r = {};
+  if(!isEmpty()){
+    r = myQueue->removeFront();
+    numElements--;
+  }
+  if(isEmpty() == true){
+    cout << "THIS QUEUE IS EMPTY." << endl;
+  }
+  return r;
+}
+
+template<class T>
+T Queue<T>::peek(){
+  return myQueue->getFront();
+}
+
+template<class T>
+bool Queue<T>::isEmpty(){
+  return (numElements == 0);
+  //returns true if it is empty, false if it is not
+}
+
+template<class T>
+int Queue<T>::getSize(){
+  return numElements;
+}
+
+template<class T>
+void Queue<T>::print(){
+  myQueue->printList();
+  cout << "" << endl;
+}
+
+template<class T>
+T* Queue<T>::getIndex(int index){
+  ListNode<T> *curr = myQueue->getFrontNode();
+  int i = 0;
+  //going to filter through until it finds the correct address
+  while (i != index){
+    curr = curr->next;
+    ++i;
+  }
+  return (curr->data);
+}
+
+
+
+
+
+
+
+
+
+
+
+  /*
+  reorganizing the queue with the queue I made with the last assignemnt
     //method for adding a new element to the queue
     void addNode(T newNode){
       ListNode<T> *node = new ListNode<T>(newNode);
@@ -87,6 +166,4 @@ class Queue{
     int getSize(){
       return size;
     }
-
-
-};
+*/

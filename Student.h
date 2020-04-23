@@ -1,13 +1,12 @@
 #include <iostream>
-using namespace std;
 //creating a class for each student that stands in lines
 //so we can input them into the queue we just finished working on
-class student{
+class Student{
   public:
     //constructors for the object student
     Student(); //constructor
     ~Student(); //destructor
-    Student(int in, int out);//overloaded constructor
+    Student(int n, int m);//overloaded constructor
 
     //variables needed to complete assignment
     int windowTime; //how long the student is up at the window

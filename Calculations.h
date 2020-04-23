@@ -29,7 +29,11 @@ class Calculation{
     string f; //file inputted
     Queue<Student> *waitingLine; //queue to keep track of students waiting for a window
     Queue<Student> *doneLine; //keeps track of stuents that have completed time at window
-
+    Window **windows; //
+    Time **timeArray;
+    int totalWindows;
+    int maxWindowTime;
+    int maxArrivalTime;
 
 
 
@@ -55,6 +59,7 @@ class Calculation{
 
 
   /*
+  this was made before I decided to put in a time and window class
   public:
     Calculation(); //constructor
     ~Calculation(); //deconstructor

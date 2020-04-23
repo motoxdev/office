@@ -8,15 +8,17 @@ template <class T>
 class ListNode{
   public:
     T data;
-    ListNode<T> prev*;
-    ListNode<T> next*;
+    ListNode<T> *prev;
+    ListNode<T> *next;
     //constructor
-    ListNode();
+    ListNode(){
+      //nothing
+    };
     //defining overloaded contructorr in template
-    ListNode(T element){
-      data = element;
+    ListNode(T d){
+      data = d;
       next = NULL;
-      previous = NULL;
+      prev = NULL;
     }
     //defining destructor in tmeplate class
     ~ListNode(){
@@ -27,7 +29,7 @@ class ListNode{
       delete next;
       delete prev;
     }
-  private:
+  //private:
     //nothing is going to be private as we want them to be
     //accessed everywhere
-}
+};

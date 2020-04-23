@@ -5,7 +5,7 @@ using namespace std;
 //constructor
 Student::Student(){
   int windowTime = 0; //how long the student is up at the window
-  int timeEntered = 0; //the time they got there
+  int timeArrived = 0; //the time they got there
   int timeWaited = 0; //how long they had to wait in line
   int timeDone = 0;
 }
@@ -16,7 +16,7 @@ Student::~Student(){
 //overeloaded constructor
 Student::Student(int wt, int te){
   windowTime = wt;
-  timeEntered = te;
+  timeArrived = te;
   timeWaited = 0;
   timeDone = 0;
 }
