@@ -10,6 +10,7 @@ class Window{
     Student* getStudent(); //returns what student is at the window
     int getIdle(); //gets the current idle time
     void decrementsIdle(); //reduces idle time now that student has made their way to a window
+    void incrementsIdle(); //adds to the idle
 
     bool isFull(); //returns true/false if a student is at a window or not
     void setFull(bool t); //sets a window empty or not

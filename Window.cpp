@@ -21,22 +21,32 @@ Window::~Window(){
 
 void Window::studentAtWindow(Student s){
   currStudent = s;
+  //setting current student to the value inputted in method
 }
 
 Student* getStudent(){
   return currStudent;
+  //returns student we are dealing with
 }
 
 int Window::getIdle(){
   return idle;
+  //getting the idle value
 }
 
 void Window::decrementsIdle(){
   idle--;
+  //decreasing idle value
+}
+
+void Window::incrementsIdle(){
+  idle++;
+  //increasing idle value
 }
 
 bool Window::isFull(){
   return full;
+  //returns if a window is full through bool
 }
 
 void Window::setFull(bool t){
