@@ -1,9 +1,60 @@
 #include "Queue.h"
 #include "Student.h"
+#include "Window.h"
+#include "Time.h"
 #include <string>
 using namespace std;
-
+//class to pull all the classes together and start the registrar process
 class Calculation{
+  public:
+    Calculation(); //constructor
+    Calculation(string file, int numWindows);
+    ~Calculation(); //deconstructor
+
+
+    //methods
+    //WINDOW SET UP
+    int numOfWindows(string file);
+    bool windowsFull();
+    bool windowsEmpty();
+    void printWindows();
+    void enterOpenWindow(Student s);
+    //registrar
+    void collectData();
+    void start();
+    void calc();
+    void printCalc();
+
+  private:
+    string f; //file inputted
+    Queue<Student> *waitingLine; //queue to keep track of students waiting for a window
+    Queue<Student> *doneLine; //keeps track of stuents that have completed time at window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*
   public:
     Calculation(); //constructor
     ~Calculation(); //deconstructor
@@ -37,6 +88,6 @@ class Calculation{
     int studentTimeEntered;
     int studentWindowTime;
     int lineNum;
-
+*/
 
 }
