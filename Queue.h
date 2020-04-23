@@ -3,7 +3,7 @@ using namespace std;
 
 //utilizing the template class shown in textbook
 template <class T>
-class queue{
+class Queue{
   public:
     ListNode<T> *front;
     ListNode<T> *back;
