@@ -36,6 +36,7 @@ class Calculation{
     //so they stick to just this class
     int studentTimeEntered;
     int studentWindowTime;
+    int lineNum;
 
 
 }
