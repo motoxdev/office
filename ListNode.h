@@ -4,6 +4,9 @@ using namespace std;
 //going to use the code within the =textbook to create the template class
 //creating invidual nodes to put into my doubly-linked list class
 
+#ifndef LISTNODE_H
+#define LISTNODE_H
+
 template <class T>
 class ListNode{
   public:
@@ -33,3 +36,4 @@ class ListNode{
     //nothing is going to be private as we want them to be
     //accessed everywhere
 };
+#endif 

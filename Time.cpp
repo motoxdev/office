@@ -2,20 +2,19 @@
 #include <iostream>
 
 Time::Time(){
-  t = 0;
-  students = new doublyLinkedList<Student>();
+  //nothing
 }
 
 Time::Time(int m){
   t = m;
-  students = new doublyLinkedList<Student>();
+  students = new DoublyLinkedList<Student>();
 }
 
 Time::~Time(){
   //delete t;
 }
 
-doublyLinkedList<Student> Time::getStudents(){
+DoublyLinkedList<Student>* Time::getStudents(){
   return students;
 }
 

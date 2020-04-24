@@ -24,8 +24,8 @@ void Window::studentAtWindow(Student s){
   //setting current student to the value inputted in method
 }
 
-Student* getStudent(){
-  return currStudent;
+Student* Window::getStudent(){
+  return &currStudent;
   //returns student we are dealing with
 }
 
@@ -50,6 +50,6 @@ bool Window::isFull(){
 }
 
 void Window::setFull(bool t){
-  this->full = b;
+  this->full = t;
   //this says "this" window is being set to full
 }

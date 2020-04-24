@@ -1,4 +1,4 @@
-#include "doublyLinkedList.h"
+#include "DoublyLinkedList.h"
 #include <iostream>
 using namespace std;
 
@@ -19,15 +19,15 @@ class Queue{
     int numElements; //variable for the number of so-called nodes in queue
 
     private:
-      doublyLinkedList<T> *myQueue; //creates a queue
+      DoublyLinkedList<T> *myQueue; //creates a queue
 
 };
 
 //filling out template
 template<class T>
-void Queue<T>::Queue(){
+Queue<T>::Queue(){
       numElements = 0;
-      myQueue = new doublyLinkedList<T>();
+      myQueue = new DoublyLinkedList<T>();
 }
 //defining deconstructor for queue template
 template<class T>

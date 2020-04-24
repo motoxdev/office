@@ -1,6 +1,8 @@
 #include <iostream>
 //creating a class for each student that stands in lines
 //so we can input them into the queue we just finished working on
+#ifndef STUDENT_H
+#define STUDENT_H
 class Student{
   public:
     //constructors for the object student
@@ -16,3 +18,5 @@ class Student{
   //private:
   //no private variables due to wanting to be able to access them
 };
+
+#endif 

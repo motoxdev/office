@@ -1,5 +1,6 @@
 #include "Student.h"
-
+#ifndef WINDOW_H
+#define WINDOW_H
 class Window{
   public:
     Window(); //constructor
@@ -21,4 +22,6 @@ class Window{
     bool full; //yes or no on window full
     int windowNumber; //number of the particular window
 
-}
+};
+
+#endif 

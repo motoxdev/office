@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <math.h>
 #include "Calculations.h"
@@ -8,13 +8,13 @@
 #include <fstream>
 #include <array>
 using namespace std;
-
+/*
 //constructor
 Calculation::Calculation(){
     //nothing
 }
 //overloaded constructor
-Calculation::Calaculation(string file, int nw){
+Calculation::Calculation(string file, int nw){
   waitingLine = new Queue<Student>();
   doneLine = new Queue<Student>();
   windows = new Window*[nw]; //creating object window 'nw' number of times
@@ -72,10 +72,11 @@ void Calculation::enterOpenWindow(Student s){
   for(int i = 0; i<totalWindows;++i){
     //going to place student at the first window
     //that is open
-    if((window[i]->isFull()) == false){
-      window[i]->studentAtWindow(s);
-      window[i]->setFull(true);
+    if((windows[i]->isFull()) == false){
+      windows[i]->studentAtWindow(s);
+      windows[i]->setFull(true);
       break;
     }
   }
 }
+*/

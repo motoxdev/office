@@ -4,6 +4,7 @@
 #include "Time.h"
 #include <string>
 using namespace std;
+/*
 //class to pull all the classes together and start the registrar process
 class Calculation{
   public:
@@ -26,7 +27,7 @@ class Calculation{
     void printCalc();
 
   private:
-    string f; //file inputted
+    string *f; //file inputted
     Queue<Student> *waitingLine; //queue to keep track of students waiting for a window
     Queue<Student> *doneLine; //keeps track of stuents that have completed time at window
     Window **windows; //
@@ -35,8 +36,9 @@ class Calculation{
     int maxWindowTime;
     int maxArrivalTime;
 
+};
 
-
+*/
 
 
 
@@ -94,5 +96,3 @@ class Calculation{
     int studentWindowTime;
     int lineNum;
 */
-
-}
