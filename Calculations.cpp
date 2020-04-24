@@ -147,4 +147,74 @@ int Calculations::getWindowNum(File *f){
      }
      sumWindow += windows[i]->getIdle();
    }
+
+   //now I am officially going to print everything out
+   cout << "Mean wait time: " << sumWait/size << endl;
+   cout << "Median wait time: " << medianWait << endl;
+   cout << "Longest wait time: " << longestWait << endl;
+   cout << "Number of students that waited longer than 10 minutes: " << numOver10 << endl;
+   cout << "Mean idle time: " << sumWindow / windowNum << endl;
+   cout << "Longest idle time: " << longestWindow << endl;
+   cout << "Nummber of windows were idle for over 5 minutes: " << numOver5 << endl;
  }
+
+ bool Calculations::windowsEmpty(){
+   for(int i = 0; i < windowNum; ++i){
+     if(windows[i]->isFull()){
+       return false;
+     }
+   }
+   return true;
+ }
+
+ void Calculations::printWindows(){
+   for(int i = 0; i < windowNum; ++i){
+     if(windows[i]->isFull()){
+       cout << windows[i]->getStudent();
+     }
+     else{
+       cout << "0" << endl;
+     }
+     if(!(i == windowNum - 1)){
+       cout << " " << endl;
+     }
+   }
+   cout << " " << endl;
+ }
+
+bool Calculations::isFileValid(){
+  if(!f->exists()){
+    return false;
+  }
+  f->open();
+  while(f->good()){
+    string temp = f->readLine();
+//I didn't know how to approach this portion, so I used a source online
+    for(int i = 0; i < temp.length(); ++i){
+      try{
+        int n = stoi(temp);
+        if(n < 0){
+          throw 1;
+        }
+        if(windowNum < 1){
+          throw 2;
+        }
+      }
+      catch(exception ex){
+        cout << "ERROR" << endl;
+        return false;
+      }
+      catch(int e){
+        if( e == 1){
+          cout << "ERROR" << endl;
+        }
+        else{
+          cout << "ERROR" << endl;
+        }
+        return false;
+      }
+    }
+  }
+  f->close(); //closing the file
+  return true; //returning that it is now good
+}
