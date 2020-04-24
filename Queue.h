@@ -1,6 +1,8 @@
 #include "DoublyLinkedList.h"
 #include <iostream>
 using namespace std;
+#ifndef QUEUE_H
+#define QUEUE_H
 
 //utilizing the template class shown in textbook
 template <class T>
@@ -88,6 +90,7 @@ T* Queue<T>::getIndex(int index){
   }
   return (curr->data);
 }
+#endif
 
 
 

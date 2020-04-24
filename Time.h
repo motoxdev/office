@@ -20,4 +20,4 @@ class Time{
     int t; //variable for time
     DoublyLinkedList<Student> *students; //this is the list to keep track of all the students
 };
-#endif 
+#endif

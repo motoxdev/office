@@ -247,7 +247,7 @@ ListNode<T>* DoublyLinkedList<T>::getFrontNode(){
 }
 
 
-#endif 
+#endif
 
 
 

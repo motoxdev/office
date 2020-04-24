@@ -1,4 +1,4 @@
-#include <iostream>
+
 //creating a class for each student that stands in lines
 //so we can input them into the queue we just finished working on
 #ifndef STUDENT_H
@@ -8,7 +8,7 @@ class Student{
     //constructors for the object student
     Student(); //constructor
     ~Student(); //destructor
-    Student(int n, int m);//overloaded constructor
+    Student(int wt, int te);//overloaded constructor
 
     //variables needed to complete assignment
     int windowTime; //how long the student is up at the window
@@ -19,4 +19,4 @@ class Student{
   //no private variables due to wanting to be able to access them
 };
 
-#endif 
+#endif
