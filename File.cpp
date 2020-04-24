@@ -53,3 +53,7 @@ void File::replaceFile(string file, string contents){
   writeFile << contents << endl;
   writeFile.close();
 }
+
+bool File::good(){
+  return (file.good());
+}

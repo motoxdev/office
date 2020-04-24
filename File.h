@@ -16,6 +16,7 @@ class File{
     void writeInFile(string file, string contents); //writing into a file
     void replaceFile(string file, string contents); //replacing a file
 
+    bool good(); //need this method for calc class 
   private:
     ifstream file; //read in file
     string name; //name of the file

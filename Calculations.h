@@ -2,6 +2,7 @@
 #include "Student.h"
 #include "Window.h"
 #include "Time.h"
+#include "File.h"
 using namespace std;
 
 #ifndef CALCULATION_H
@@ -10,11 +11,11 @@ using namespace std;
 class Calculations{
   public:
     Calculations(); //constructor
-    Calculations(string file, int count); //overloaded constructor
+    Calculations(char *file, int count); //overloaded constructor
     ~Calculations(); //deconstructor
 
   void begin();
-  //int getWindowNum(File *f);
+  int getWindowNum(File *f);
   void collectData();
   void calc();
   bool windowsFull();
@@ -23,11 +24,14 @@ class Calculations{
   bool windowsEmpty();
   void printWindows();
 
+  bool isFileValid();
+
+
   private:
-    //File *f;
+    File *f;
     Queue<Student> *waitLine;
     Queue<Student> *doneLine;
-    Window **window;
+    Window **windows;
     Time **timeArr;
     int windowNum;
     int maxWindowTime;
